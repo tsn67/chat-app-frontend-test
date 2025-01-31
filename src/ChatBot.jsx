@@ -18,13 +18,13 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('https://adventurous-spirit-production-4334.up.railway.app/chat', {
+      const response = await axios.post('https://xplorechatbot-production.up.railway.app/chat', {
         message: inputMessage,
-        
+        context: messages
       });
 
       const botMessage = {
-        type: 'bot',
+        type: 'system',
         content: response.data.response || 'Sorry, I could not process your request.'
       };
       setMessages(prev => [...prev, botMessage]);
