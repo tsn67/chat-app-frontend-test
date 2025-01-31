@@ -18,7 +18,7 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:3000/chat', {
+      const response = await axios.post('https://adventurous-spirit-production-4334.up.railway.app/chat', {
         message: inputMessage,
         
       });
